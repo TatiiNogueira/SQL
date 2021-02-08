@@ -8,6 +8,9 @@
  /* Eliminar uma Base de dados
  Em Nome colocamos o nome da Base de Dados que queremos eliminar*/
  drop database Nome;
+ 
+ /*Adicionar uma coluna a uma tabela*/
+Alter table Nome_da_Tabela ADD nome_da_coluna_que_quero_adicionar datatype /*O datatype é o que desejarmos*/
 
  /*Restaurar uma Base de Dados
  RECOMENDAÇÂO: Colocar o ficheiro dentro da pasta "C:\Users\Pubblic\Downloads"
