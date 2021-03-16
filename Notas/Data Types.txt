@@ -1,0 +1,33 @@
+No size fica o número que queremos, corresponde ao comprimento.
+size = tamanho
+
+-> Char(size) - É uma string de comprimento fixo (Pode conter letras números e carateres especiais) - Tamanho de carateres de 0 a 255
+-> Varchar(size) - É uma string de comprimento variável (Pode conter letras números e carateres especiais) - Tamanho de carateres de 0 a 65535
+-> TinyBlob -BLOBs (Objetos Binários Grandes) - Comprimento máximo de 255 bytes
+-> TinyText - Armazena uma string com um comprimento máximo de 255 caraters
+-> Text(size) - Armazena uma string com um comprimento máximo de 65.535
+-> Enum(val1,val2,...) - Um objeto string que pode ter apenas um valor escolhido de uma lista de valores possiveis. Podem ser listados 65535 valores, se for inserido um valor que não esteja listado, o campo irá aparecer em branco.
+-> Set(val1,val2,..) - Um objeto string que pode ter 0 ou mais valores - Podem ser listados 64 valores
+-> Int(size) - Um inteiro médio - O parametro de tamanho especifica a largura máxima da tela (que é de 255)
+Intervalo com sinal --> -2147483648 a 2147483647
+Intervalo sem sinal --> 0 a 4294967295
+-> Bigint(size) - Um inteiro grande - O parametro de tamanho especifica a largura máxima da tela (que é de 255)
+Intervalo com sinal --> -9223372036854775808 a 922337036854775808
+Intervalo sem sinal --> 0 a 18446744073709551615
+-> Charn(n) - Fixo - Máximo de caraters 8000
+-> Varchar(n) - Variável - Máximo de caraters 8000
+-> Varchar(max) - Variável - Máximo de caraters 107374182
+-> nchar - Fixo - Máximo de caraters 4000
+-> nvarchar - Variavel - Máximo de caraters 4000
+-> nvarchar(max) - Variavel - Máximo de caraters 536870912
+-> bit - Pode ser 0(False), 1(True) ou NULL
+-> datetime - Data de 1 de janeiro de 1753 a 31 se dezembro de 9999, tempo 3.33 milisegundos(0.0033s) - Modelos da hora 0000-00-00
+-> date - Armazena apenas uma data, de 1 de janeiro de 0001 a 31 de dezembro de 9999
+-> Decimal(size,d) - Um valor de ponto fixo exato
+size - Número total de digitos, o máximo é de 65 e o padrão é 10
+d - Número de digitos após o ponto decimal (após a virgula), o máximo é 30 e o padrão é 0
+-> smablint - Permite valores inteiros entre -32768 e 32767
+-> Money - Dados monetários (Dinheiro) de -922337203685477580 a 9223372036854775807
+-> numeric(p,s) - Precisão fixa de números de escala, permite números de -10^38 + 1 a 10^38 - 1
+p - Número total máximo de digitos à esquerda da casa decimal, deve ser um valor de 1 a 38 e o padrão é 18
+s - Número total máximo à direita da casa decimal, deve ser um valor de 0 a p e o padrão é 0
