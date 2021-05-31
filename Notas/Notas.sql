@@ -34,7 +34,7 @@ Alter table Nome_da_Tabela ADD nome_da_coluna_que_quero_adicionar datatype /*O d
  SELECT DISTINCT Nome_da_Coluna FROM [Nome_da_Base_De_Dados][Nome_Tabela]
 
  /*Saber o número de Rows da tabela
- Se quisere saber o número de Rows mas que não conte os valores repetido/duplicados batsa colocar count(DISTINCT e o resto*/
+ Se quisere saber o número de Rows mas que não conte os valores repetidos/duplicados basta colocar count(DISTINCT e o resto*/
  select COUNT(*) from [Nome_da_Base_De_Dados][Nome_Tabela]
 
  /*Saber o número de Rows de uma ou várias colunas em especifico da tabela
@@ -80,3 +80,15 @@ Select nome_coluna1,nome_coluna2, .... from [Nome_da_Base_De_Dados][Nome_Tabela_
 
 /*Transferir dados de uma tabela para outra tabela*/
 INSERT INTO [Nome_da_Base_De_Dados][Nome_Tabela_1] (nome_coluna1,nome_coluna2)(SELECT nome_coluna1,nome_coluna2 FROM [Nome_da_Base_De_Dados][Nome_Tabela_2])
+
+--Criar uma cópia de seguraça/ Criar uma tabela com os mesmos dados da tabela indicada
+SELECT * into Nome_da_Tabela_Criar
+FROM Tabela_Origem
+
+--Número total de difernetes rows
+SELECT APPROX_COUNT_DISTINCT(Coluna)
+FROM Base de Dados
+
+--Ver o número de elementos da coluna B, que existem por coluna A 
+SELECT ColunaA,APPROX_COUNT_DISTINCT(ColunaB)
+FROM Base_de_Dados group by ColunaA
